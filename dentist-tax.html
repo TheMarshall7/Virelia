@@ -47,19 +47,117 @@
 </head>
 <body class="selection:bg-[#ede9fe] selection:text-[#1f1738]">
 
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2">
-                <img src="https://storage.googleapis.com/msgsndr/D9EwGrg33pctwAN0KYGQ/media/689617b36346f4ec25540b89.png" alt="Virelia" class="h-16 md:h-20 w-auto object-contain grayscale brightness-0 opacity-80 hover:opacity-100 transition-all duration-300">
+    <!-- Floating Navbar -->
+    <div class="fixed top-2 md:top-4 left-0 right-0 z-50 flex justify-center px-3 md:px-4">
+        <nav class="bg-white/90 backdrop-blur-md border border-[#e9d5ff]/60 rounded-full px-4 md:px-8 py-3 md:py-5 flex items-center justify-between shadow-lg shadow-[#1f1738]/20 max-w-6xl w-full">
+            <!-- Logo - Mobile -->
+            <a href="index.html" class="flex items-center gap-2 group md:hidden">
+                <img src="https://storage.googleapis.com/msgsndr/D9EwGrg33pctwAN0KYGQ/media/689617b36346f4ec25540b89.png" alt="Virelia" class="h-10 w-auto object-contain grayscale brightness-0 opacity-80 group-hover:opacity-100 transition-all duration-300">
             </a>
-            <a href="index.html" class="text-sm font-medium text-[#1f1738] hover:text-[#251a3d] transition-colors">
-                Back to Home
+            
+            <!-- Logo - Desktop -->
+            <a href="index.html" class="hidden md:flex items-center gap-2 group">
+                <img src="https://storage.googleapis.com/msgsndr/D9EwGrg33pctwAN0KYGQ/media/689617b36346f4ec25540b89.png" alt="Virelia" class="h-16 w-auto object-contain grayscale brightness-0 opacity-80 group-hover:opacity-100 transition-all duration-300">
             </a>
-        </div>
-    </header>
+            
+            <!-- Centered Navigation - Desktop -->
+            <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-600 flex-1 justify-center">
+                <a href="index.html#virelia-standard" class="hover:text-[#1f1738] transition-colors relative group">
+                    The Standard
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1f1738] group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="index.html#choose-path" class="hover:text-[#1f1738] transition-colors relative group">
+                    Pathways
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1f1738] group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="index.html#leadership" class="hover:text-[#1f1738] transition-colors relative group">
+                    About
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1f1738] group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <div class="relative group">
+                    <a href="life-insurance-intro.html" class="hover:text-[#1f1738] transition-colors relative font-semibold text-[#1f1738] flex items-center gap-1">
+                        Life Insurance
+                        <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                    </a>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-2">
+                        <a href="life-insurance-intro.html" class="block px-4 py-3 rounded-lg hover:bg-gray-50 text-black text-sm transition-colors">
+                            <div class="font-semibold mb-1">Get Started</div>
+                            <div class="text-xs text-gray-600">Protect your family's future</div>
+                        </a>
+                        <a href="life-insurance-types.html" class="block px-4 py-3 rounded-lg hover:bg-gray-50 text-black text-sm transition-colors">
+                            <div class="font-semibold mb-1">4 Types Explained</div>
+                            <div class="text-xs text-gray-600">Term, Whole, Universal, Seg Funds</div>
+                        </a>
+                        <a href="life-insurance-disability.html" class="block px-4 py-3 rounded-lg hover:bg-gray-50 text-black text-sm transition-colors">
+                            <div class="font-semibold mb-1">Disability & Health</div>
+                            <div class="text-xs text-gray-600">Protect your paycheck</div>
+                        </a>
+                        <a href="life-insurance-segfunds.html" class="block px-4 py-3 rounded-lg hover:bg-gray-50 text-black text-sm transition-colors">
+                            <div class="font-semibold mb-1">Advanced Planning</div>
+                            <div class="text-xs text-gray-600">Seg funds & tax strategies</div>
+                        </a>
+                    </div>
+                </div>
+                <a href="dentist-tax.html" class="hover:text-[#1f1738] transition-colors relative group font-semibold text-[#1f1738]">
+                    Tax
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-[#1f1738]"></span>
+                </a>
+            </div>
 
-    <main class="pt-20">
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                <i data-lucide="menu" class="w-6 h-6 text-slate-600"></i>
+            </button>
+
+            <!-- CTA Button - Desktop -->
+            <div class="hidden md:flex items-center">
+                <a href="book-appointment.html" class="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-[#1f1738] to-[#1a1230] text-[#f5f3ed] text-xs md:text-sm font-semibold rounded-full hover:from-[#1a1230] hover:to-[#1f1538] transition-colors flex items-center gap-2 shadow-md shadow-[#1f1738]/50">
+                    <span class="hidden sm:inline">Get Started</span>
+                    <span class="sm:hidden">Start</span>
+                    <i data-lucide="arrow-right" class="w-3 h-3 md:w-4 md:h-4"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-20 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#e9d5ff]/60 shadow-xl hidden md:hidden">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <nav class="flex flex-col gap-4">
+                <a href="index.html#virelia-standard" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738] flex items-center justify-between">
+                    <span>The Standard</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="index.html#choose-path" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738] flex items-center justify-between">
+                    <span>Pathways</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="index.html#leadership" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738] flex items-center justify-between">
+                    <span>About</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <div class="py-3 px-4 rounded-lg bg-[#1f1738]/10 border-l-4 border-[#1f1738]">
+                    <div class="font-semibold text-[#1f1738] mb-2">Life Insurance</div>
+                    <div class="flex flex-col gap-2 ml-2">
+                        <a href="life-insurance-intro.html" class="text-sm text-slate-600 hover:text-[#1f1738] transition-colors">Get Started</a>
+                        <a href="life-insurance-types.html" class="text-sm text-slate-600 hover:text-[#1f1738] transition-colors">4 Types Explained</a>
+                        <a href="life-insurance-disability.html" class="text-sm text-slate-600 hover:text-[#1f1738] transition-colors">Disability & Health</a>
+                        <a href="life-insurance-segfunds.html" class="text-sm text-slate-600 hover:text-[#1f1738] transition-colors">Advanced Planning</a>
+                    </div>
+                </div>
+                <a href="dentist-tax.html" class="py-3 px-4 rounded-lg bg-[#1f1738]/10 hover:bg-[#1f1738]/20 transition-colors text-[#1f1738] font-semibold border-l-4 border-[#1f1738] flex items-center justify-between">
+                    <span>Tax</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="book-appointment.html" class="mt-4 py-3 px-4 rounded-lg bg-gradient-to-r from-[#1f1738] to-[#1a1230] text-[#f5f3ed] font-semibold text-center flex items-center justify-center gap-2 shadow-md">
+                    <span>Get Started</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="pt-20 md:pt-32">
         
         <!-- Hero Section -->
         <section class="relative gradient-animated text-[#f5f3ed] py-20 md:py-32 overflow-hidden">
@@ -76,12 +174,12 @@
                 </div>
                 
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-tight">
-                    ATTENTION: CANADIAN BUSINESS OWNERS!<br>
-                    <span class="text-[#f5f3ed]/90">You're Working Too Hard to Give Half Your Money to the Government.</span>
+                    Stop Giving Half Your Money<br>
+                    <span class="text-[#f5f3ed]/90">to the Government</span>
                 </h1>
                 
                 <p class="text-lg md:text-xl text-[#f5f3ed]/90 mb-10 leading-relaxed max-w-3xl mx-auto">
-                    If your business is profitable, CRA is taking more than its share. You're missing the chance to legally shield your earnings, grow them tax-free, and retire with millions — without touching the stock market.
+                    Legally shield your earnings. Grow them tax-free. Retire with millions.
                 </p>
                 
                 <div class="mb-12">
@@ -116,7 +214,7 @@
                     </div>
                 </div>
                 
-                <a href="#consultation" class="inline-flex items-center gap-3 px-8 py-4 bg-[#f5f3ed] text-[#1f1738] rounded-xl font-bold text-lg hover:bg-[#f5f3ed]/90 transition-all shadow-2xl hover:shadow-3xl hover:scale-105 transform duration-300">
+                <a href="book-appointment.html" class="inline-flex items-center gap-3 px-8 py-4 bg-[#f5f3ed] text-[#1f1738] rounded-xl font-bold text-lg hover:bg-[#f5f3ed]/90 transition-all shadow-2xl hover:shadow-3xl hover:scale-105 transform duration-300">
                     See How This Works For Your Business
                     <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </a>
@@ -162,7 +260,7 @@
                 
                 <div class="text-center p-8 rounded-2xl bg-[#1f1738] text-[#f5f3ed]">
                     <p class="text-xl md:text-2xl font-bold mb-4">You didn't build your business to become a full-time tax donor.</p>
-                    <a href="#consultation" class="inline-flex items-center gap-2 px-6 py-3 bg-[#f5f3ed] text-[#1f1738] rounded-lg font-semibold hover:bg-[#f5f3ed]/90 transition-all">
+                    <a href="book-appointment.html" class="inline-flex items-center gap-2 px-6 py-3 bg-[#f5f3ed] text-[#1f1738] rounded-lg font-semibold hover:bg-[#f5f3ed]/90 transition-all">
                         See How This Works For Your Business
                         <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
@@ -190,7 +288,7 @@
                         </div>
                         <h3 class="font-bold text-lg mb-2 text-black">Trusted Quality</h3>
                         <p class="text-black/70 text-sm mb-4">Fast, stress-free applications to unbeatable quality of tailored plans</p>
-                        <a href="#" class="text-[#1f1738] text-sm font-semibold hover:underline flex items-center gap-1">
+                        <a href="book-appointment.html" class="text-[#1f1738] text-sm font-semibold hover:underline flex items-center gap-1">
                             Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
                         </a>
                     </div>
@@ -201,7 +299,7 @@
                         </div>
                         <h3 class="font-bold text-lg mb-2 text-black">Fast Process</h3>
                         <p class="text-black/70 text-sm mb-4">Get covered in days, not weeks. Streamlined system cuts out delays</p>
-                        <a href="#" class="text-[#1f1738] text-sm font-semibold hover:underline flex items-center gap-1">
+                        <a href="book-appointment.html" class="text-[#1f1738] text-sm font-semibold hover:underline flex items-center gap-1">
                             Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
                         </a>
                     </div>
@@ -212,7 +310,7 @@
                         </div>
                         <h3 class="font-bold text-lg mb-2 text-black">Best Quality</h3>
                         <p class="text-black/70 text-sm mb-4">Elite-tier insurance solutions built for your needs</p>
-                        <a href="#" class="text-[#1f1738] text-sm font-semibold hover:underline flex items-center gap-1">
+                        <a href="book-appointment.html" class="text-[#1f1738] text-sm font-semibold hover:underline flex items-center gap-1">
                             Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
                         </a>
                     </div>
@@ -223,7 +321,7 @@
                         </div>
                         <h3 class="font-bold text-lg mb-2 text-black">Solution</h3>
                         <p class="text-black/70 text-sm mb-4">Tailored plans that fit your budget, goals, and lifestyle</p>
-                        <a href="#" class="text-[#1f1738] text-sm font-semibold hover:underline flex items-center gap-1">
+                        <a href="book-appointment.html" class="text-[#1f1738] text-sm font-semibold hover:underline flex items-center gap-1">
                             Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i>
                         </a>
                     </div>
@@ -270,7 +368,7 @@
                 
                 <div class="text-center p-6 rounded-2xl bg-[#f5f3ed] text-[#1f1738]">
                     <p class="text-xl font-bold mb-4">Once again, you didn't build your business to become a full-time tax donor.</p>
-                    <a href="#consultation" class="inline-flex items-center gap-2 px-6 py-3 bg-[#1f1738] text-[#f5f3ed] rounded-lg font-semibold hover:bg-[#1a1230] transition-all">
+                    <a href="book-appointment.html" class="inline-flex items-center gap-2 px-6 py-3 bg-[#1f1738] text-[#f5f3ed] rounded-lg font-semibold hover:bg-[#1a1230] transition-all">
                         See How This Works For Your Business
                         <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
@@ -933,7 +1031,7 @@
                 <!-- CTA at Bottom -->
                 <div class="mt-12 text-center">
                     <p class="text-lg text-black/70 mb-6">Still have questions?</p>
-                    <a href="#consultation" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#1f1738] to-[#251a3d] text-[#f5f3ed] rounded-xl font-bold hover:shadow-xl hover:scale-105 transition-all">
+                    <a href="book-appointment.html" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#1f1738] to-[#251a3d] text-[#f5f3ed] rounded-xl font-bold hover:shadow-xl hover:scale-105 transition-all">
                         <i data-lucide="message-circle" class="w-5 h-5"></i>
                         Book Your Free Consultation
                     </a>
@@ -977,12 +1075,12 @@
                 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                    <a href="#consultation" class="group w-full sm:w-auto px-10 py-5 bg-[#f5f3ed] text-[#1f1738] rounded-2xl font-black text-lg hover:bg-[#f5f3ed]/90 transition-all shadow-2xl hover:shadow-3xl hover:scale-105 transform duration-300 flex items-center justify-center gap-3">
+                    <a href="book-appointment.html" class="group w-full sm:w-auto px-10 py-5 bg-[#f5f3ed] text-[#1f1738] rounded-2xl font-black text-lg hover:bg-[#f5f3ed]/90 transition-all shadow-2xl hover:shadow-3xl hover:scale-105 transform duration-300 flex items-center justify-center gap-3">
                         <i data-lucide="calendar" class="w-6 h-6"></i>
                         Book Free Consultation
                         <i data-lucide="arrow-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform"></i>
                     </a>
-                    <a href="#consultation" class="group w-full sm:w-auto px-10 py-5 bg-transparent border-2 border-[#f5f3ed]/30 text-[#f5f3ed] rounded-2xl font-bold text-lg hover:border-[#f5f3ed] hover:bg-[#f5f3ed]/10 transition-all backdrop-blur-sm flex items-center justify-center gap-3">
+                    <a href="book-appointment.html" class="group w-full sm:w-auto px-10 py-5 bg-transparent border-2 border-[#f5f3ed]/30 text-[#f5f3ed] rounded-2xl font-bold text-lg hover:border-[#f5f3ed] hover:bg-[#f5f3ed]/10 transition-all backdrop-blur-sm flex items-center justify-center gap-3">
                         <i data-lucide="play-circle" class="w-6 h-6"></i>
                         Watch Video Again
                     </a>
@@ -1009,23 +1107,148 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#1f1738] text-[#f5f3ed] py-12 border-t border-[#f5f3ed]/10">
-        <div class="max-w-6xl mx-auto px-4 md:px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex flex-wrap items-center gap-6 text-sm">
-                    <a href="#" class="hover:text-[#f5f3ed] transition-colors">Privacy Policy</a>
-                    <span class="hidden md:inline">•</span>
-                    <a href="#" class="hover:text-[#f5f3ed] transition-colors">Term & Condition</a>
-                    <span class="hidden md:inline">•</span>
-                    <a href="#" class="hover:text-[#f5f3ed] transition-colors">FAQ</a>
+    <footer class="relative bg-[#1f1738] pt-20 pb-12 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-[#251a3d]/30 via-transparent to-transparent pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <!-- Brand Column -->
+                <div class="lg:col-span-2">
+                    <div class="mb-6">
+                        <img src="https://storage.googleapis.com/msgsndr/D9EwGrg33pctwAN0KYGQ/media/689617b36346f4ec25540b89.png" alt="Virelia" class="h-10 w-auto mb-6 brightness-0 invert opacity-95">
+                        <p class="text-[#f5f3ed]/90 text-base leading-relaxed max-w-sm font-light">
+                            Building a secure future for everyone, everywhere. Modern insurance solutions that adapt to your life.
+                        </p>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="flex items-center gap-4 mt-8">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#f5f3ed]/10 hover:bg-[#f5f3ed]/20 border border-[#f5f3ed]/20 flex items-center justify-center text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all group">
+                            <i data-lucide="linkedin" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#f5f3ed]/10 hover:bg-[#f5f3ed]/20 border border-[#f5f3ed]/20 flex items-center justify-center text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all group">
+                            <i data-lucide="twitter" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#f5f3ed]/10 hover:bg-[#f5f3ed]/20 border border-[#f5f3ed]/20 flex items-center justify-center text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all group">
+                            <i data-lucide="facebook" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#f5f3ed]/10 hover:bg-[#f5f3ed]/20 border border-[#f5f3ed]/20 flex items-center justify-center text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all group">
+                            <i data-lucide="instagram" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                        </a>
+                    </div>
                 </div>
-                <p class="text-sm text-[#f5f3ed]/60">Copyright Virelia 2025. All rights reserved</p>
+                
+                <!-- Life Insurance Links -->
+                <div>
+                    <h4 class="text-[#f5f3ed] text-sm font-semibold mb-6 tracking-wide uppercase">Life Insurance</h4>
+                    <ul class="space-y-3">
+                        <li><a href="life-insurance-intro.html" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Get Started</span>
+                        </a></li>
+                        <li><a href="life-insurance-types.html" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>4 Types Explained</span>
+                        </a></li>
+                        <li><a href="life-insurance-disability.html" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Disability & Health</span>
+                        </a></li>
+                        <li><a href="life-insurance-segfunds.html" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Advanced Planning</span>
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Links -->
+                <div>
+                    <h4 class="text-[#f5f3ed] text-sm font-semibold mb-6 tracking-wide uppercase">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#leadership" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>About Us</span>
+                        </a></li>
+                        <li><a href="index.html#virelia-standard" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>The Standard</span>
+                        </a></li>
+                        <li><a href="index.html#choose-path" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Pathways</span>
+                        </a></li>
+                        <li><a href="dentist-tax.html" class="text-[#f5f3ed] hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm font-semibold">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-100"></i>
+                            <span>Tax Solutions</span>
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources Links -->
+                <div>
+                    <h4 class="text-[#f5f3ed] text-sm font-semibold mb-6 tracking-wide uppercase">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="faq.html" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>FAQ</span>
+                        </a></li>
+                        <li><a href="privacy-policy.html" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Privacy Policy</span>
+                        </a></li>
+                        <li><a href="terms-of-service.html" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Terms of Service</span>
+                        </a></li>
+                        <li><a href="index.html#cta" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Get Started</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-[#f5f3ed]/10 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex flex-wrap items-center gap-6 text-xs text-[#f5f3ed]/60">
+                        <p>© 2024 Virelia Insurance Group. All rights reserved.</p>
+                        <span class="hidden md:inline">•</span>
+                        <a href="privacy-policy.html" class="hover:text-[#f5f3ed] transition-colors">Privacy Policy</a>
+                        <span class="hidden md:inline">•</span>
+                        <a href="terms-of-service.html" class="hover:text-[#f5f3ed] transition-colors">Terms of Service</a>
+                        <span class="hidden md:inline">•</span>
+                        <a href="faq.html" class="hover:text-[#f5f3ed] transition-colors">FAQ</a>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-[#f5f3ed]/50">
+                        <i data-lucide="heart" class="w-3 h-3 text-[#f5f3ed]/40"></i>
+                        <span>Made with care for your future</span>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
     <script>
         lucide.createIcons();
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.setAttribute('data-lucide', 'menu');
+                } else {
+                    icon.setAttribute('data-lucide', 'x');
+                }
+                lucide.createIcons();
+            });
+        }
         
         // Video play overlay functionality
         const video = document.getElementById('hero-video');
