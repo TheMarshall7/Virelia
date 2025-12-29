@@ -1,0 +1,832 @@
+<html lang="en" class="antialiased scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virelia | Future Forward Insurance &amp; Career</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            overflow-x: hidden;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffffff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e2e8f0;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cbd5e1;
+        }
+
+        /* Marquee Animation */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 40s linear infinite;
+        }
+
+        /* Subtle Grain/Grid Background Pattern - Light Version */
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+        }
+
+        /* Text Gradient - Dark Purple */
+        .text-gradient {
+            background: linear-gradient(to right, #1f1738, #251a3d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Card Hover Glow - Light Version */
+        .hover-glow {
+            transition: all 0.3s ease;
+            background-color: #ffffff;
+            border: 1px solid #e9d5ff;
+        }
+        .hover-glow:hover {
+            box-shadow: 0 10px 40px -10px rgba(31, 23, 56, 0.25);
+            border-color: rgba(31, 23, 56, 0.4);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="selection:bg-[#ede9fe] selection:text-[#1a1230]">
+
+    <!-- Floating Navbar -->
+    <div class="fixed top-2 md:top-4 left-0 right-0 z-50 flex justify-center px-3 md:px-4">
+        <nav class="bg-white/90 backdrop-blur-md border border-[#e9d5ff]/60 rounded-full px-4 md:px-8 py-3 md:py-5 flex items-center justify-between shadow-lg shadow-[#1f1738]/20 max-w-6xl w-full">
+            <!-- Logo - Mobile -->
+            <a href="#" class="flex items-center gap-2 group md:hidden">
+                <img src="https://storage.googleapis.com/msgsndr/D9EwGrg33pctwAN0KYGQ/media/689617b36346f4ec25540b89.png" alt="Virelia" class="h-10 w-auto object-contain grayscale brightness-0 opacity-80 group-hover:opacity-100 transition-all duration-300">
+            </a>
+            
+            <!-- Logo - Desktop -->
+            <a href="#" class="hidden md:flex items-center gap-2 group">
+                <img src="https://storage.googleapis.com/msgsndr/D9EwGrg33pctwAN0KYGQ/media/689617b36346f4ec25540b89.png" alt="Virelia" class="h-16 w-auto object-contain grayscale brightness-0 opacity-80 group-hover:opacity-100 transition-all duration-300">
+            </a>
+            
+            <!-- Centered Navigation - Desktop -->
+            <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-600 flex-1 justify-center">
+                <a href="#virelia-standard" class="hover:text-[#1f1738] transition-colors relative group">
+                    Services
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1f1738] group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#choose-path" class="hover:text-[#1f1738] transition-colors relative group">
+                    Solutions
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1f1738] group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="dentist-tax.html" class="hover:text-[#1f1738] transition-colors relative group font-semibold text-[#1f1738]">
+                    Tax
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-[#1f1738]"></span>
+                </a>
+                <a href="#leadership" class="hover:text-[#1f1738] transition-colors relative group">
+                    About
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1f1738] group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                <i data-lucide="menu" class="w-6 h-6 text-slate-600"></i>
+            </button>
+
+            <!-- CTA Button - Desktop -->
+            <div class="hidden md:flex items-center">
+                <a href="#cta" class="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-[#1f1738] to-[#1a1230] text-[#f5f3ed] text-xs md:text-sm font-semibold rounded-full hover:from-[#1a1230] hover:to-[#1f1538] transition-colors flex items-center gap-2 shadow-md shadow-[#1f1738]/50">
+                    <span class="hidden sm:inline">Get Started</span>
+                    <span class="sm:hidden">Start</span>
+                    <i data-lucide="arrow-right" class="w-3 h-3 md:w-4 md:h-4"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-20 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#e9d5ff]/60 shadow-xl hidden md:hidden">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <nav class="flex flex-col gap-4">
+                <a href="#virelia-standard" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738] flex items-center justify-between">
+                    <span>Services</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#choose-path" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738] flex items-center justify-between">
+                    <span>Solutions</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="dentist-tax.html" class="py-3 px-4 rounded-lg bg-[#1f1738]/10 hover:bg-[#1f1738]/20 transition-colors text-[#1f1738] font-semibold flex items-center justify-between border-l-4 border-[#1f1738]">
+                    <span>Tax</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#leadership" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738] flex items-center justify-between">
+                    <span>About</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#cta" class="mt-4 py-3 px-4 rounded-lg bg-gradient-to-r from-[#1f1738] to-[#1a1230] text-[#f5f3ed] font-semibold text-center flex items-center justify-center gap-2 shadow-md">
+                    <span>Get Started</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="relative pt-20 md:pt-32 pb-12 md:pb-20 overflow-hidden bg-gray-50">
+        <!-- Subtle Purple Gradient Overlay -->
+        <div class="absolute inset-0 pointer-events-none z-0" style="background: radial-gradient(circle at 20% 30%, rgba(49, 36, 91, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(37, 26, 61, 0.12) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(31, 23, 56, 0.08) 0%, transparent 70%);"></div>
+        
+        <!-- Hero Section - Two Column Layout -->
+        <section class="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                
+                <!-- Left Column - Text Content -->
+                <div class="space-y-6 md:space-y-8 text-center lg:text-left">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-[#1f1738] leading-tight">
+                        Make an Impact<br>
+                        <span class="text-[#1f1738]">Invest In Your Future</span>
+                    </h1>
+                    
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        At Virelia, we help people secure financial peace of mind – for themselves, their families, and their businesses. Whether you're looking for a rewarding career in insurance or the right plan to protect what matters most, we're here to make it simple, clear, and achievable.
+                    </p>
+                    
+                    <div class="flex justify-center lg:justify-start">
+                        <button class="h-12 px-6 md:px-8 bg-[#1f1738] hover:bg-[#1a1230] text-[#f5f3ed] text-sm font-semibold rounded-lg shadow-lg flex items-center gap-2 transition-all group">
+                            Learn More
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Dashed Line -->
+                    <div class="border-t-2 border-dashed border-gray-300 w-full pt-6 md:pt-8"></div>
+                </div>
+                
+                <!-- Right Column - Image -->
+                <div class="relative order-first lg:order-last">
+                    <div class="rounded-xl md:rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="Virelia Team" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Logos -->
+        <div class="py-12 border-b border-gray-100 relative bg-white overflow-hidden">
+            <!-- Subtle Purple Gradient Overlay -->
+            <div class="absolute inset-0 pointer-events-none z-0" style="background: radial-gradient(ellipse at left center, rgba(49, 36, 91, 0.12) 0%, transparent 60%), radial-gradient(ellipse at right center, rgba(37, 26, 61, 0.10) 0%, transparent 60%);"></div>
+            <!-- Gradient Fade for Marquee -->
+            <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+            <div class="flex overflow-hidden relative z-10 opacity-60 hover:opacity-100 transition-opacity duration-500">
+                <div class="flex animate-marquee gap-16 items-center whitespace-nowrap min-w-full px-4 text-slate-400">
+                    <span class="text-xl font-semibold tracking-tight flex items-center gap-2 grayscale hover:grayscale-0 transition-all"><i data-lucide="shield" class="w-5 h-5"></i> Mutual Of Omaha</span>
+                    <span class="text-xl font-semibold tracking-tight flex items-center gap-2 grayscale hover:grayscale-0 transition-all"><i data-lucide="heart" class="w-5 h-5"></i> Aetna</span>
+                    <span class="text-xl font-semibold tracking-tight flex items-center gap-2 grayscale hover:grayscale-0 transition-all"><i data-lucide="anchor" class="w-5 h-5"></i> Transamerica</span>
+                    <span class="text-xl font-semibold tracking-tight flex items-center gap-2 grayscale hover:grayscale-0 transition-all"><i data-lucide="briefcase" class="w-5 h-5"></i> Prosperity</span>
+                    <span class="text-xl font-semibold tracking-tight flex items-center gap-2 grayscale hover:grayscale-0 transition-all"><i data-lucide="umbrella" class="w-5 h-5"></i> Americo</span>
+                    <span class="text-xl font-semibold tracking-tight flex items-center gap-2 grayscale hover:grayscale-0 transition-all"><i data-lucide="users" class="w-5 h-5"></i> Forresters</span>
+                    <!-- Duplicate -->
+                    <span class="text-xl font-semibold tracking-tight flex items-center gap-2 grayscale hover:grayscale-0 transition-all"><i data-lucide="shield" class="w-5 h-5"></i> Mutual Of Omaha</span>
+                    <span class="text-xl font-semibold tracking-tight flex items-center gap-2 grayscale hover:grayscale-0 transition-all"><i data-lucide="heart" class="w-5 h-5"></i> Aetna</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bento Grid Features -->
+        <section id="virelia-standard" class="py-12 md:py-24 px-4 md:px-6 relative bg-[#1f1738] overflow-hidden">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 pointer-events-none z-0">
+                <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#251a3d]/20 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#1a1230]/20 rounded-full blur-3xl"></div>
+            </div>
+            
+            <div class="max-w-6xl mx-auto relative z-10">
+                <!-- Header -->
+                <div class="mb-12 md:mb-16 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f5f3ed]/10 border border-[#f5f3ed]/20 mb-6">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-[#f5f3ed]"></i>
+                        <span class="text-[#f5f3ed] text-xs font-semibold uppercase tracking-wider">Why Choose Us</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#f5f3ed] mb-4">The Virelia Standard</h2>
+                    <p class="text-[#f5f3ed]/70 text-base md:text-lg max-w-2xl">Redefining what you expect from an insurance agency. Experience the difference.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Feature 1: Large Span - Rapid Coverage -->
+                    <div class="md:col-span-2 group relative overflow-hidden rounded-3xl bg-white p-8 md:p-10 cursor-pointer">
+                        <!-- Hover Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#1f1738]/0 to-[#1f1738]/0 group-hover:from-[#1f1738]/5 group-hover:to-[#251a3d]/5 transition-all duration-500"></div>
+                        
+                        <!-- Animated Border -->
+                        <div class="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-[#1f1738]/20 transition-all duration-500"></div>
+                        
+                        <div class="relative z-10 flex flex-col justify-between h-full min-h-[300px]">
+                            <div>
+                                <div class="flex items-center justify-between mb-6">
+                                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center text-[#f5f3ed] shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                        <i data-lucide="zap" class="w-7 h-7"></i>
+                                    </div>
+                                    <div class="px-4 py-2 rounded-full bg-[#1f1738]/10 border border-[#1f1738]/20">
+                                        <span class="text-[#1f1738] text-xs font-bold">75% FASTER</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-black mb-4 group-hover:text-[#1f1738] transition-colors">Rapid Coverage System</h3>
+                                <p class="text-black/70 text-base leading-relaxed max-w-md">
+                                    Experience the fastest application process in the industry. We've removed the paperwork barriers so you can get covered in minutes, not weeks.
+                                </p>
+                            </div>
+                            
+                            <!-- Interactive Progress Bar -->
+                            <div class="mt-8 space-y-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-black/60 font-medium">Processing Speed</span>
+                                    <span class="text-[#1f1738] font-bold">75%</span>
+                                </div>
+                                <div class="h-3 w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-[#1f1738] to-[#251a3d] rounded-full transition-all duration-1000 group-hover:w-full" style="width: 75%;"></div>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs text-black/50">
+                                    <i data-lucide="clock" class="w-3 h-3"></i>
+                                    <span>Average time: 15 minutes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: Precision Match -->
+                    <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white to-gray-50 p-8 cursor-pointer border-2 border-transparent hover:border-[#1f1738]/20 transition-all duration-300">
+                        <!-- Hover Effect -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#1f1738]/0 to-[#251a3d]/0 group-hover:from-[#1f1738]/5 group-hover:to-[#251a3d]/5 transition-all duration-500"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center text-[#f5f3ed] mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                <i data-lucide="target" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-black mb-4 group-hover:text-[#1f1738] transition-colors">Precision Match</h3>
+                            <p class="text-black/70 text-sm md:text-base leading-relaxed mb-6">
+                                Our algorithm finds the perfect carrier for your specific health and financial profile.
+                            </p>
+                            
+                            <!-- Interactive Stats -->
+                            <div class="space-y-3 pt-4 border-t border-gray-200">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs text-black/60">Match Accuracy</span>
+                                    <span class="text-[#1f1738] font-bold text-sm">98%</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-[#1f1738]"></i>
+                                    <span class="text-xs text-black/70">AI-Powered Matching</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: Top-Rated Carriers -->
+                    <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white to-gray-50 p-8 cursor-pointer border-2 border-transparent hover:border-[#1f1738]/20 transition-all duration-300">
+                        <!-- Hover Effect -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#1f1738]/0 to-[#251a3d]/0 group-hover:from-[#1f1738]/5 group-hover:to-[#251a3d]/5 transition-all duration-500"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center text-[#f5f3ed] mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                <i data-lucide="shield-check" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-black mb-4 group-hover:text-[#1f1738] transition-colors">Top-Rated Carriers</h3>
+                            <p class="text-black/70 text-sm md:text-base leading-relaxed mb-6">
+                                Access to A+ rated insurance providers that have stood the test of time.
+                            </p>
+                            
+                            <!-- Rating Display -->
+                            <div class="flex items-center gap-2 pt-4 border-t border-gray-200">
+                                <div class="flex items-center gap-1">
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-yellow-500 fill-yellow-500"></i>
+                                </div>
+                                <span class="text-xs font-bold text-[#1f1738]">A+ Rated</span>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Feature 4: Large Span - Mentorship -->
+                     <div class="md:col-span-2 group relative overflow-hidden rounded-3xl bg-white p-8 md:p-10 cursor-pointer">
+                        <!-- Hover Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#1f1738]/0 to-[#1f1738]/0 group-hover:from-[#1f1738]/5 group-hover:to-[#251a3d]/5 transition-all duration-500"></div>
+                        
+                        <!-- Animated Border -->
+                        <div class="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-[#1f1738]/20 transition-all duration-500"></div>
+                        
+                        <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center text-[#f5f3ed] mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                                    <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-bold text-black mb-4 group-hover:text-[#1f1738] transition-colors">Dedicated Mentorship</h3>
+                                <p class="text-black/70 text-base leading-relaxed mb-6">
+                                    For our agents, we don't just offer a contract. We offer a partnership with direct access to industry leaders.
+                                </p>
+                                
+                                <!-- Interactive Stats -->
+                                <div class="flex items-center gap-6">
+                                    <div>
+                                        <div class="text-2xl font-bold text-[#1f1738]">1:1</div>
+                                        <div class="text-xs text-black/60">Mentorship</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-[#1f1738]">24/7</div>
+                                        <div class="text-xs text-black/60">Support</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Interactive Dashboard Preview -->
+                            <div class="bg-gradient-to-br from-[#1f1738]/5 to-[#251a3d]/5 rounded-2xl p-6 border border-[#1f1738]/10 group-hover:border-[#1f1738]/20 transition-all">
+                                <div class="flex items-center gap-3 mb-4 pb-4 border-b border-[#1f1738]/10">
+                                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center">
+                                        <i data-lucide="user" class="w-5 h-5 text-[#f5f3ed]"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="h-3 w-24 bg-[#1f1738]/20 rounded mb-2"></div>
+                                        <div class="h-2 w-16 bg-[#1f1738]/15 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="h-2 w-full bg-[#1f1738]/10 rounded"></div>
+                                    <div class="h-2 w-5/6 bg-[#1f1738]/10 rounded"></div>
+                                    <div class="h-2 w-4/6 bg-[#1f1738]/10 rounded"></div>
+                                </div>
+                                <div class="mt-4 pt-4 border-t border-[#1f1738]/10 flex items-center gap-2">
+                                    <i data-lucide="message-circle" class="w-4 h-4 text-[#1f1738]"></i>
+                                    <span class="text-xs text-[#1f1738] font-medium">Live Chat Available</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Split Section (Families vs Agents) -->
+        <section id="choose-path" class="py-12 md:py-24 bg-white border-y border-black/10 relative overflow-hidden">
+            <!-- Subtle Purple Gradient Overlay -->
+            <div class="absolute inset-0 pointer-events-none z-0" style="background: radial-gradient(ellipse at bottom left, rgba(49, 36, 91, 0.15) 0%, transparent 50%), radial-gradient(ellipse at top right, rgba(37, 26, 61, 0.12) 0%, transparent 50%), radial-gradient(ellipse at center, rgba(31, 23, 56, 0.08) 0%, transparent 60%);"></div>
+            <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+                <div class="text-center mb-12 md:mb-20">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1f1738]/10 border border-[#1f1738]/20 mb-6">
+                        <i data-lucide="compass" class="w-4 h-4 text-[#1f1738]"></i>
+                        <span class="text-[#1f1738] text-xs font-semibold uppercase tracking-wider">Your Journey Starts Here</span>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black mb-4">Choose Your Path</h2>
+                    <p class="text-black/60 mt-2 md:mt-4 font-light text-base md:text-lg max-w-2xl mx-auto">Tailored resources for every stage of your journey. Whether you're protecting your family or building your career.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+                    <!-- Path: Families -->
+                    <div class="group relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden cursor-pointer">
+                        <!-- Background Image -->
+                        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Family" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-[#1f1738]/95 via-[#1f1738]/90 to-[#251a3d]/95 group-hover:from-[#1f1738]/90 group-hover:via-[#1f1738]/85 group-hover:to-[#251a3d]/90 transition-all duration-500"></div>
+                        
+                        <!-- Content -->
+                        <div class="absolute inset-0 p-8 md:p-12 flex flex-col justify-between">
+                            <!-- Top Badge -->
+                            <div class="flex justify-between items-start">
+                                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f5f3ed]/20 backdrop-blur-sm border border-[#f5f3ed]/30">
+                                    <i data-lucide="shield" class="w-4 h-4 text-[#f5f3ed]"></i>
+                                    <span class="text-[#f5f3ed] text-xs font-semibold uppercase tracking-wider">Protection</span>
+                                </div>
+                                <div class="w-14 h-14 rounded-full bg-[#f5f3ed]/10 backdrop-blur-sm border-2 border-[#f5f3ed]/30 flex items-center justify-center group-hover:bg-[#f5f3ed] group-hover:border-[#f5f3ed] transition-all duration-300">
+                                    <i data-lucide="arrow-right" class="w-6 h-6 text-[#f5f3ed] group-hover:text-[#1f1738] transition-colors"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Bottom Content -->
+                            <div>
+                                <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f5f3ed] mb-4 group-hover:translate-x-2 transition-transform duration-300">For Families</h3>
+                                <p class="text-[#f5f3ed]/90 text-base md:text-lg mb-6 leading-relaxed max-w-md">Secure your legacy with affordable, comprehensive life insurance plans designed to protect what matters most.</p>
+                                
+                                <!-- Features List -->
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center gap-3 text-[#f5f3ed]/90">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-[#f5f3ed]"></i>
+                                        <span class="text-sm md:text-base">Fast approval process</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-[#f5f3ed]/90">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-[#f5f3ed]"></i>
+                                        <span class="text-sm md:text-base">Flexible coverage options</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-[#f5f3ed]/90">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-[#f5f3ed]"></i>
+                                        <span class="text-sm md:text-base">Expert guidance</span>
+                                    </div>
+                                </div>
+                                
+                                <button class="px-6 py-3 bg-[#f5f3ed] text-[#1f1738] rounded-xl font-semibold text-sm hover:bg-[#f5f3ed]/90 transition-all flex items-center gap-2 group/btn shadow-lg">
+                                    Explore Plans
+                                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Path: Agents -->
+                    <div class="group relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden cursor-pointer">
+                        <!-- Background Image -->
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Meeting" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-black/95 via-black/90 to-[#1f1738]/95 group-hover:from-black/90 group-hover:via-black/85 group-hover:to-[#1f1738]/90 transition-all duration-500"></div>
+                        
+                        <!-- Content -->
+                        <div class="absolute inset-0 p-8 md:p-12 flex flex-col justify-between">
+                            <!-- Top Badge -->
+                            <div class="flex justify-between items-start">
+                                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1f1738]/80 backdrop-blur-sm border border-[#1f1738]">
+                                    <i data-lucide="briefcase" class="w-4 h-4 text-[#f5f3ed]"></i>
+                                    <span class="text-[#f5f3ed] text-xs font-semibold uppercase tracking-wider">Career</span>
+                                </div>
+                                <div class="w-14 h-14 rounded-full bg-[#1f1738]/50 backdrop-blur-sm border-2 border-[#1f1738] flex items-center justify-center group-hover:bg-[#1f1738] group-hover:border-[#1f1738] transition-all duration-300">
+                                    <i data-lucide="arrow-right" class="w-6 h-6 text-[#f5f3ed]"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Bottom Content -->
+                            <div>
+                                <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f5f3ed] mb-4 group-hover:translate-x-2 transition-transform duration-300">For Agents</h3>
+                                <p class="text-[#f5f3ed]/90 text-base md:text-lg mb-6 leading-relaxed max-w-md">High compensation, daily leads, and world-class training to build your insurance career.</p>
+                                
+                                <!-- Features List -->
+                                <div class="space-y-3 mb-6">
+                                    <div class="flex items-center gap-3 text-[#f5f3ed]/90">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-[#f5f3ed]"></i>
+                                        <span class="text-sm md:text-base">Daily qualified leads</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-[#f5f3ed]/90">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-[#f5f3ed]"></i>
+                                        <span class="text-sm md:text-base">Top-tier commissions</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 text-[#f5f3ed]/90">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-[#f5f3ed]"></i>
+                                        <span class="text-sm md:text-base">Mentorship program</span>
+                                    </div>
+                                </div>
+                                
+                                <button class="px-6 py-3 bg-[#1f1738] text-[#f5f3ed] rounded-xl font-semibold text-sm hover:bg-[#1a1230] transition-all flex items-center gap-2 group/btn shadow-lg border border-[#1f1738]/50">
+                                    Join the Team
+                                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section id="leadership" class="py-12 md:py-24 relative overflow-hidden bg-white">
+            <!-- Subtle Purple Gradient Overlay -->
+            <div class="absolute inset-0 pointer-events-none z-0" style="background: radial-gradient(ellipse at top left, rgba(37, 26, 61, 0.14) 0%, transparent 50%), radial-gradient(ellipse at top right, rgba(49, 36, 91, 0.12) 0%, transparent 50%), radial-gradient(ellipse at bottom center, rgba(31, 23, 56, 0.10) 0%, transparent 60%);"></div>
+
+            <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+                <!-- Header Badge -->
+                <div class="text-center mb-12 md:mb-16">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1f1738]/10 border border-[#1f1738]/20 mb-6">
+                        <i data-lucide="award" class="w-4 h-4 text-[#1f1738]"></i>
+                        <span class="text-[#1f1738] text-xs font-semibold uppercase tracking-wider">Leadership</span>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <!-- Image Side -->
+                    <div class="relative group order-2 lg:order-1">
+                        <!-- Modern Image Container -->
+                        <div class="relative">
+                            <!-- Decorative Elements -->
+                            <div class="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-[#1f1738]/20 to-transparent rounded-2xl blur-xl"></div>
+                            <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-tl from-[#251a3d]/20 to-transparent rounded-2xl blur-xl"></div>
+                            
+                            <!-- Image Container -->
+                            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                                <div class="aspect-[4/3] relative overflow-hidden">
+                                    <img src="https://storage.googleapis.com/msgsndr/D9EwGrg33pctwAN0KYGQ/media/68969a2bb0c839988424ea59.png" alt="Leadership" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                                </div>
+                                
+                                <!-- Floating Name Tags -->
+                                <div class="absolute bottom-6 left-6 right-6 flex justify-between gap-4">
+                                    <div class="flex-1 bg-white/95 backdrop-blur-md text-slate-900 px-4 py-3 rounded-xl text-sm font-semibold border border-gray-200 shadow-lg hover:shadow-xl transition-all group/name">
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-2 h-2 rounded-full bg-[#1f1738]"></div>
+                                            <span>Jonathan Bowen</span>
+                                        </div>
+                                        <p class="text-xs text-slate-600 mt-1 font-normal">Co-Founder</p>
+                                    </div>
+                                    <div class="flex-1 bg-white/95 backdrop-blur-md text-slate-900 px-4 py-3 rounded-xl text-sm font-semibold border border-gray-200 shadow-lg hover:shadow-xl transition-all group/name">
+                                        <div class="flex items-center gap-2">
+                                            <div class="w-2 h-2 rounded-full bg-[#1f1738]"></div>
+                                            <span>Christian Bell</span>
+                                        </div>
+                                        <p class="text-xs text-slate-600 mt-1 font-normal">Co-Founder</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Side -->
+                    <div class="order-1 lg:order-2">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6 tracking-tight leading-tight">
+                            Built on Integrity.<br>
+                            <span class="text-[#1f1738]">Driven by Results.</span>
+                        </h2>
+                        
+                        <!-- Quote Card -->
+                        <div class="relative mb-10 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#1f1738]/5 to-[#251a3d]/5 border border-[#1f1738]/10 backdrop-blur-sm">
+                            <div class="absolute top-4 left-4 text-[#1f1738]/20">
+                                <i data-lucide="quote" class="w-12 h-12"></i>
+                            </div>
+                            <p class="text-black/70 text-base md:text-lg mb-4 font-light leading-relaxed relative z-10 italic">
+                                "We founded Virelia to bridge the gap between complex financial products and the people who need them most. We believe in transparency, speed, and treating every client like family."
+                            </p>
+                            <div class="flex items-center gap-2 text-sm text-black/50">
+                                <div class="w-1 h-1 rounded-full bg-[#1f1738]"></div>
+                                <span class="font-medium">Our Promise</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Feature Cards -->
+                        <div class="space-y-4">
+                            <div class="group flex items-start gap-4 p-5 rounded-xl bg-white border-2 border-gray-100 hover:border-[#1f1738]/30 hover:shadow-lg transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center text-[#f5f3ed] shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                                    <i data-lucide="award" class="w-6 h-6"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-black font-bold text-base mb-1">Decades of Experience</h4>
+                                    <p class="text-black/60 text-sm leading-relaxed">Combined leadership experience in high-stakes markets with proven track records.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="group flex items-start gap-4 p-5 rounded-xl bg-white border-2 border-gray-100 hover:border-[#1f1738]/30 hover:shadow-lg transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center text-[#f5f3ed] shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                                    <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-black font-bold text-base mb-1">People-First Approach</h4>
+                                    <p class="text-black/60 text-sm leading-relaxed">Technology enables us, but humanity drives us. Every decision puts people first.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="py-12 md:py-24 px-4 md:px-6 relative">
+            <div class="max-w-5xl mx-auto relative">
+                <!-- Modern CTA Card with Gradient -->
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                    <!-- Gradient Background -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#1f1738] via-[#251a3d] to-[#1a1230]"></div>
+                    <!-- Subtle Pattern Overlay -->
+                    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, rgba(245, 243, 237, 0.3) 1px, transparent 0); background-size: 40px 40px;"></div>
+                    <!-- Glow Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[#1f1738]/20"></div>
+                    
+                    <div class="relative z-10 p-8 md:p-16">
+                        <!-- Badge -->
+                        <div class="flex justify-center mb-6">
+                            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f5f3ed]/10 backdrop-blur-sm border border-[#f5f3ed]/20">
+                                <i data-lucide="sparkles" class="w-4 h-4 text-[#f5f3ed]"></i>
+                                <span class="text-[#f5f3ed] text-xs font-semibold uppercase tracking-wider">Join Thousands</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Heading -->
+                        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold text-[#f5f3ed] mb-4 tracking-tight text-center">
+                            Ready to get started?
+                        </h2>
+                        <p class="text-[#f5f3ed]/80 text-base md:text-lg mb-10 max-w-2xl mx-auto text-center font-light leading-relaxed">
+                            Join thousands of families and agents who trust Virelia for their future. Simple, fast, and built for you.
+                        </p>
+                        
+                        <!-- Action Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                            <button class="group w-full sm:w-auto px-8 py-4 bg-[#f5f3ed] text-[#1f1738] text-sm md:text-base font-bold rounded-xl hover:bg-[#f5f3ed]/90 transition-all flex items-center justify-center gap-2 shadow-xl hover:shadow-2xl hover:scale-105 transform duration-300">
+                                <i data-lucide="file-text" class="w-5 h-5"></i>
+                                Get A Free Quote
+                            </button>
+                            <button class="group w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#f5f3ed]/20 to-[#f5f3ed]/10 backdrop-blur-sm border-2 border-[#f5f3ed]/30 text-[#f5f3ed] text-sm md:text-base font-bold rounded-xl hover:from-[#f5f3ed]/30 hover:to-[#f5f3ed]/20 hover:border-[#f5f3ed]/50 transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 transform duration-300">
+                                <i data-lucide="briefcase" class="w-5 h-5"></i>
+                                Agent Application
+                                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Trust Indicators -->
+                        <div class="flex flex-wrap items-center justify-center gap-6 md:gap-8 text-[#f5f3ed]/60 text-sm">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                                <span>Secure & Trusted</span>
+                            </div>
+                            <div class="hidden md:block w-1 h-1 rounded-full bg-[#f5f3ed]/40"></div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                                <span>Fast Process</span>
+                            </div>
+                            <div class="hidden md:block w-1 h-1 rounded-full bg-[#f5f3ed]/40"></div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="users" class="w-4 h-4"></i>
+                                <span>4,000+ Agents</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="relative bg-[#1f1738] pt-20 pb-12 overflow-hidden">
+        <!-- Decorative gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#251a3d]/30 via-transparent to-transparent pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <!-- Brand Column -->
+                <div class="lg:col-span-2">
+                    <div class="mb-6">
+                        <img src="https://storage.googleapis.com/msgsndr/D9EwGrg33pctwAN0KYGQ/media/689617b36346f4ec25540b89.png" alt="Virelia" class="h-10 w-auto mb-6 brightness-0 invert opacity-95">
+                        <p class="text-[#f5f3ed]/90 text-base leading-relaxed max-w-sm font-light">
+                            Building a secure future for everyone, everywhere. Modern insurance solutions that adapt to your life.
+                        </p>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="flex items-center gap-4 mt-8">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#f5f3ed]/10 hover:bg-[#f5f3ed]/20 border border-[#f5f3ed]/20 flex items-center justify-center text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all group">
+                            <i data-lucide="linkedin" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#f5f3ed]/10 hover:bg-[#f5f3ed]/20 border border-[#f5f3ed]/20 flex items-center justify-center text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all group">
+                            <i data-lucide="twitter" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#f5f3ed]/10 hover:bg-[#f5f3ed]/20 border border-[#f5f3ed]/20 flex items-center justify-center text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all group">
+                            <i data-lucide="facebook" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#f5f3ed]/10 hover:bg-[#f5f3ed]/20 border border-[#f5f3ed]/20 flex items-center justify-center text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all group">
+                            <i data-lucide="instagram" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Platform Links -->
+                <div>
+                    <h4 class="text-[#f5f3ed] text-sm font-semibold mb-6 tracking-wide uppercase">Platform</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Life Insurance</span>
+                        </a></li>
+                        <li><a href="#" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Mortgage Protection</span>
+                        </a></li>
+                        <li><a href="#" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Final Expense</span>
+                        </a></li>
+                        <li><a href="#" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Agent Resources</span>
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Links -->
+                <div>
+                    <h4 class="text-[#f5f3ed] text-sm font-semibold mb-6 tracking-wide uppercase">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>About Us</span>
+                        </a></li>
+                        <li><a href="#" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Careers</span>
+                        </a></li>
+                        <li><a href="#" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Contact</span>
+                        </a></li>
+                        <li><a href="#" class="text-[#f5f3ed]/80 hover:text-[#f5f3ed] transition-all flex items-center gap-2 group text-sm">
+                            <i data-lucide="arrow-right" class="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                            <span>Blog</span>
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter/CTA -->
+                <div>
+                    <h4 class="text-[#f5f3ed] text-sm font-semibold mb-6 tracking-wide uppercase">Stay Connected</h4>
+                    <p class="text-[#f5f3ed]/70 text-sm mb-4 leading-relaxed">Get the latest updates and insights delivered to your inbox.</p>
+                    <form class="space-y-3">
+                        <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 rounded-lg bg-[#f5f3ed]/10 border border-[#f5f3ed]/20 text-[#f5f3ed] placeholder:text-[#f5f3ed]/40 focus:outline-none focus:ring-2 focus:ring-[#f5f3ed]/30 focus:border-[#f5f3ed]/40 transition-all text-sm">
+                        <button type="submit" class="w-full px-4 py-3 bg-[#f5f3ed] text-[#1f1738] rounded-lg font-semibold text-sm hover:bg-[#f5f3ed]/90 transition-all flex items-center justify-center gap-2 group">
+                            Subscribe
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-[#f5f3ed]/10 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex flex-wrap items-center gap-6 text-xs text-[#f5f3ed]/60">
+                        <p>© 2024 Virelia Insurance Group. All rights reserved.</p>
+                        <span class="hidden md:inline">•</span>
+                        <a href="#" class="hover:text-[#f5f3ed] transition-colors">Privacy Policy</a>
+                        <span class="hidden md:inline">•</span>
+                        <a href="#" class="hover:text-[#f5f3ed] transition-colors">Terms of Service</a>
+                        <span class="hidden md:inline">•</span>
+                        <a href="#" class="hover:text-[#f5f3ed] transition-colors">Cookie Policy</a>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-[#f5f3ed]/50">
+                        <i data-lucide="heart" class="w-3 h-3 text-[#f5f3ed]/40"></i>
+                        <span>Made with care for your future</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.setAttribute('data-lucide', 'menu');
+                } else {
+                    icon.setAttribute('data-lucide', 'x');
+                }
+                lucide.createIcons();
+            });
+            
+            // Close mobile menu when clicking on a link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                });
+            });
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+
+</body></html>
