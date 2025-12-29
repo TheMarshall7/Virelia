@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect Your Family's Future | Virelia Life Insurance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffffff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e2e8f0;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cbd5e1;
+        }
+    </style>
+</head>
+<body class="selection:bg-[#ede9fe] selection:text-[#1a1230]">
+
+    <!-- Floating Navbar -->
+    <div class="fixed top-2 md:top-4 left-0 right-0 z-50 flex justify-center px-3 md:px-4">
+        <nav class="bg-white/90 backdrop-blur-md border border-[#e9d5ff]/60 rounded-full px-4 md:px-8 py-3 md:py-5 flex items-center justify-between shadow-lg shadow-[#1f1738]/20 max-w-6xl w-full">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="https://storage.googleapis.com/msgsndr/D9EwGrg33pctwAN0KYGQ/media/689617b36346f4ec25540b89.png" alt="Virelia" class="h-10 md:h-16 w-auto object-contain grayscale brightness-0 opacity-80 group-hover:opacity-100 transition-all duration-300">
+            </a>
+            
+            <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-600 flex-1 justify-center">
+                <a href="index.html#virelia-standard" class="hover:text-[#1f1738] transition-colors">Services</a>
+                <a href="index.html#choose-path" class="hover:text-[#1f1738] transition-colors">Solutions</a>
+                <a href="life-insurance-intro.html" class="text-[#1f1738] font-semibold">Life Insurance</a>
+                <a href="dentist-tax.html" class="hover:text-[#1f1738] transition-colors">Tax</a>
+                <a href="index.html#leadership" class="hover:text-[#1f1738] transition-colors">About</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                <i data-lucide="menu" class="w-6 h-6 text-slate-600"></i>
+            </button>
+
+            <div class="hidden md:flex items-center">
+                <a href="#consultation" class="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-[#1f1738] to-[#1a1230] text-[#f5f3ed] text-xs md:text-sm font-semibold rounded-full hover:from-[#1a1230] hover:to-[#1f1538] transition-colors flex items-center gap-2 shadow-md shadow-[#1f1738]/50">
+                    <span class="hidden sm:inline">Get Started</span>
+                    <span class="sm:hidden">Start</span>
+                    <i data-lucide="arrow-right" class="w-3 h-3 md:w-4 md:h-4"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-20 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#e9d5ff]/60 shadow-xl hidden md:hidden">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <nav class="flex flex-col gap-4">
+                <a href="index.html#virelia-standard" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738]">Services</a>
+                <a href="index.html#choose-path" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738]">Solutions</a>
+                <a href="life-insurance-intro.html" class="py-3 px-4 rounded-lg bg-[#1f1738]/10 hover:bg-[#1f1738]/20 transition-colors text-[#1f1738] font-semibold border-l-4 border-[#1f1738]">Life Insurance</a>
+                <a href="dentist-tax.html" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738]">Tax</a>
+                <a href="index.html#leadership" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738]">About</a>
+                <a href="#consultation" class="mt-4 py-3 px-4 rounded-lg bg-gradient-to-r from-[#1f1738] to-[#1a1230] text-[#f5f3ed] font-semibold text-center">Get Started</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="relative pt-20 md:pt-32 pb-12 md:pb-20 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+        <!-- Hero Section -->
+        <section class="max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-20 relative z-10">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1f1738] mb-6 leading-tight">
+                    Protect Your Family's Future<br>
+                    <span class="text-[#1f1738]">Without Guessing What You Need</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-700 leading-relaxed max-w-3xl mx-auto mb-8">
+                    Stop letting uncertainty decide your family's financial security. In 15 minutes, we'll show you exactly which insurance options actually fit your life—not a cookie-cutter plan.
+                </p>
+            </div>
+        </section>
+
+        <!-- Pain Point Section -->
+        <section class="max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-16">
+            <div class="bg-red-50 border-l-4 border-red-400 rounded-r-2xl p-8 md:p-10 mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-black mb-6">You've thought about getting life insurance. Maybe multiple times.</h2>
+                <p class="text-lg text-black/80 mb-6">But there's always a reason it gets pushed to next week:</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+                        <i data-lucide="help-circle" class="w-6 h-6 text-red-600 shrink-0 mt-1"></i>
+                        <div>
+                            <p class="font-semibold text-black mb-1">"I don't know which type is right for me"</p>
+                            <p class="text-black/70">Term? Whole life? Universal life? They all sound the same.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+                        <i data-lucide="dollar-sign" class="w-6 h-6 text-red-600 shrink-0 mt-1"></i>
+                        <div>
+                            <p class="font-semibold text-black mb-1">"I'm worried I'll overpay"</p>
+                            <p class="text-black/70">What if I lock into the wrong plan for 20 years?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+                        <i data-lucide="file-question" class="w-6 h-6 text-red-600 shrink-0 mt-1"></i>
+                        <div>
+                            <p class="font-semibold text-black mb-1">"What actually gets paid out?"</p>
+                            <p class="text-black/70">Will my family actually receive the money, or will taxes eat it all?</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+                        <i data-lucide="clock" class="w-6 h-6 text-red-600 shrink-0 mt-1"></i>
+                        <div>
+                            <p class="font-semibold text-black mb-1">"I don't have time for a complicated process"</p>
+                            <p class="text-black/70">I need this handled simply.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#1f1738] rounded-3xl p-8 md:p-12 text-center mb-12">
+                <p class="text-xl md:text-2xl text-[#f5f3ed] font-semibold mb-4">
+                    The truth? Most people don't need a complicated plan. They need the right plan—and that requires understanding your actual situation, not just selling you whatever generates the biggest commission.
+                </p>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-black mb-6">The Solution (What You Get)</h2>
+                <p class="text-xl text-black/70 mb-8">We specialize in translating life insurance from confusing to crystal clear.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="bg-white p-8 rounded-2xl border-2 border-gray-100 hover:border-[#1f1738]/30 transition-all shadow-lg">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center mb-4">
+                        <i data-lucide="earphones" class="w-6 h-6 text-[#f5f3ed]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-3">We listen to your life</h3>
+                    <p class="text-black/70">Family situation, mortgage, income, business plans, retirement goals.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl border-2 border-gray-100 hover:border-[#1f1738]/30 transition-all shadow-lg">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center mb-4">
+                        <i data-lucide="message-square" class="w-6 h-6 text-[#f5f3ed]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-3">We explain your actual options</h3>
+                    <p class="text-black/70">Not jargon. Real English. What each type covers, what it costs, what gets paid to your family.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl border-2 border-gray-100 hover:border-[#1f1738]/30 transition-all shadow-lg">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center mb-4">
+                        <i data-lucide="calculator" class="w-6 h-6 text-[#f5f3ed]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-3">We show you the math</h3>
+                    <p class="text-black/70">How much coverage you actually need. Whether you should lock it in for 20 years or stay flexible.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl border-2 border-gray-100 hover:border-[#1f1738]/30 transition-all shadow-lg">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center mb-4">
+                        <i data-lucide="file-check" class="w-6 h-6 text-[#f5f3ed]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-3">We handle the paperwork</h3>
+                    <p class="text-black/70">You focus on your family. We handle the forms, the underwriting, the complexity.</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 md:p-12 text-center border-2 border-green-200">
+                <p class="text-2xl md:text-3xl font-bold text-black mb-4">
+                    Result: You own a plan that fits your life. Your family is protected. You sleep better at night.
+                </p>
+            </div>
+        </section>
+
+        <!-- Social Proof Section -->
+        <section class="max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-16">
+            <div class="text-center mb-8">
+                <p class="text-xl md:text-2xl text-black/80 font-semibold mb-4">
+                    "[# of families protected] families trust us to protect their future."
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                    <p class="text-black/70 italic mb-4">"Within 30 days, Sarah locked in $500K coverage for $28/month. She finally told her husband she was taken care of."</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                    <p class="text-black/70 italic mb-4">"When David got sick, his family didn't worry about money. His plan paid out exactly as promised."</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                    <p class="text-black/70 italic mb-4">"I was confused about what I actually needed. In 20 minutes, it all made sense."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefit Callout Boxes -->
+        <section class="max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-[#1f1738]/30 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center mb-4">
+                        <i data-lucide="dollar-sign" class="w-6 h-6 text-[#f5f3ed]"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-black mb-2">Lower premiums than you think</h3>
+                    <p class="text-black/70 text-sm">Many people can lock in lifetime coverage for less than a streaming service</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-[#1f1738]/30 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center mb-4">
+                        <i data-lucide="clock" class="w-6 h-6 text-[#f5f3ed]"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-black mb-2">Approved in days, not months</h3>
+                    <p class="text-black/70 text-sm">Most applicants get a decision within 2-3 weeks</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-[#1f1738]/30 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center mb-4">
+                        <i data-lucide="file-check" class="w-6 h-6 text-[#f5f3ed]"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-black mb-2">No medical exam required</h3>
+                    <p class="text-black/70 text-sm">Depending on coverage amount; most of our clients qualify instantly</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-[#1f1738]/30 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1f1738] to-[#251a3d] flex items-center justify-center mb-4">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-[#f5f3ed]"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-black mb-2">Your family gets all the money</h3>
+                    <p class="text-black/70 text-sm">Tax-free to your loved ones, guaranteed</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="consultation" class="max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-20">
+            <div class="bg-gradient-to-br from-[#1f1738] via-[#251a3d] to-[#1a1230] rounded-3xl p-8 md:p-16 text-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10">
+                    <div class="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+                </div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f5f3ed] mb-6">
+                        Get Your Free 15-Minute Insurance Consultation
+                    </h2>
+                    <p class="text-xl text-[#f5f3ed]/90 mb-8">
+                        No forms to fill out. No sales pitch. Just clarity.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="#consultation" class="px-8 py-4 bg-[#f5f3ed] text-[#1f1738] rounded-xl font-bold hover:bg-[#f5f3ed]/90 transition-all flex items-center gap-2 shadow-xl hover:scale-105 transform duration-300">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                            Book a Call
+                        </a>
+                        <a href="life-insurance-types.html" class="px-8 py-4 bg-transparent border-2 border-[#f5f3ed]/30 text-[#f5f3ed] rounded-xl font-bold hover:border-[#f5f3ed] hover:bg-[#f5f3ed]/10 transition-all flex items-center gap-2">
+                            <i data-lucide="file-text" class="w-5 h-5"></i>
+                            Send Me Info
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1f1738] text-[#f5f3ed] py-12 border-t border-[#f5f3ed]/10">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex flex-wrap items-center gap-6 text-sm">
+                    <a href="#" class="hover:text-[#f5f3ed] transition-colors">Privacy Policy</a>
+                    <span class="hidden md:inline">•</span>
+                    <a href="#" class="hover:text-[#f5f3ed] transition-colors">Term & Condition</a>
+                    <span class="hidden md:inline">•</span>
+                    <a href="#" class="hover:text-[#f5f3ed] transition-colors">FAQ</a>
+                </div>
+                <p class="text-sm text-[#f5f3ed]/70">Copyright Virelia 2025. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.setAttribute('data-lucide', 'menu');
+                } else {
+                    icon.setAttribute('data-lucide', 'x');
+                }
+                lucide.createIcons();
+            });
+            
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+

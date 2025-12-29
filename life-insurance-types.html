@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Types of Life Insurance Explained | Virelia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffffff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e2e8f0;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cbd5e1;
+        }
+    </style>
+</head>
+<body class="selection:bg-[#ede9fe] selection:text-[#1a1230]">
+
+    <!-- Floating Navbar -->
+    <div class="fixed top-2 md:top-4 left-0 right-0 z-50 flex justify-center px-3 md:px-4">
+        <nav class="bg-white/90 backdrop-blur-md border border-[#e9d5ff]/60 rounded-full px-4 md:px-8 py-3 md:py-5 flex items-center justify-between shadow-lg shadow-[#1f1738]/20 max-w-6xl w-full">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="https://storage.googleapis.com/msgsndr/D9EwGrg33pctwAN0KYGQ/media/689617b36346f4ec25540b89.png" alt="Virelia" class="h-10 md:h-16 w-auto object-contain grayscale brightness-0 opacity-80 group-hover:opacity-100 transition-all duration-300">
+            </a>
+            
+            <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-600 flex-1 justify-center">
+                <a href="index.html#virelia-standard" class="hover:text-[#1f1738] transition-colors">Services</a>
+                <a href="index.html#choose-path" class="hover:text-[#1f1738] transition-colors">Solutions</a>
+                <a href="life-insurance-intro.html" class="text-[#1f1738] font-semibold">Life Insurance</a>
+                <a href="dentist-tax.html" class="hover:text-[#1f1738] transition-colors">Tax</a>
+                <a href="index.html#leadership" class="hover:text-[#1f1738] transition-colors">About</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                <i data-lucide="menu" class="w-6 h-6 text-slate-600"></i>
+            </button>
+
+            <div class="hidden md:flex items-center">
+                <a href="#consultation" class="px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-[#1f1738] to-[#1a1230] text-[#f5f3ed] text-xs md:text-sm font-semibold rounded-full hover:from-[#1a1230] hover:to-[#1f1538] transition-colors flex items-center gap-2 shadow-md shadow-[#1f1738]/50">
+                    <span class="hidden sm:inline">Get Started</span>
+                    <span class="sm:hidden">Start</span>
+                    <i data-lucide="arrow-right" class="w-3 h-3 md:w-4 md:h-4"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-20 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#e9d5ff]/60 shadow-xl hidden md:hidden">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <nav class="flex flex-col gap-4">
+                <a href="index.html#virelia-standard" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738]">Services</a>
+                <a href="index.html#choose-path" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738]">Solutions</a>
+                <a href="life-insurance-intro.html" class="py-3 px-4 rounded-lg bg-[#1f1738]/10 hover:bg-[#1f1738]/20 transition-colors text-[#1f1738] font-semibold border-l-4 border-[#1f1738]">Life Insurance</a>
+                <a href="dentist-tax.html" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738]">Tax</a>
+                <a href="index.html#leadership" class="py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-slate-600 font-medium hover:text-[#1f1738]">About</a>
+                <a href="#consultation" class="mt-4 py-3 px-4 rounded-lg bg-gradient-to-r from-[#1f1738] to-[#1a1230] text-[#f5f3ed] font-semibold text-center">Get Started</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="relative pt-20 md:pt-32 pb-12 md:pb-20 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+        <!-- Hero Section -->
+        <section class="max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-20">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1f1738] mb-6 leading-tight">
+                    4 Types of Life Insurance.<br>
+                    <span class="text-[#1f1738]">Which One Is Hiding the Right Answer for You?</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                    Life insurance isn't a one-size-fits-all product. It never has been. What works for a 28-year-old with a new mortgage and two kids is completely different from what works for a 55-year-old business owner planning to sell their company.
+                </p>
+            </div>
+        </section>
+
+        <!-- Type 1: Term Life -->
+        <section class="max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-16">
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border-2 border-gray-100 mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl">1</span>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-black">Term Life Insurance</h2>
+                        <p class="text-lg text-black/70 italic">"The 'Renter' Approach to Life Insurance"</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-black mb-3">What It Is</h3>
+                        <p class="text-black/70 leading-relaxed">
+                            You get coverage for a fixed period (10, 20, 30 years). If you die during that term, your family gets the full payout, tax-free. If you outlive the term, the policy expires and coverage ends.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 rounded-xl p-6">
+                            <h4 class="font-bold text-black mb-2">The Cost</h4>
+                            <p class="text-black/70">Lowest premiums. A 35-year-old in good health might lock in $500K coverage for just $25-$35/month.</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-6">
+                            <h4 class="font-bold text-black mb-2">Cash Value</h4>
+                            <p class="text-black/70">None. It's pure insurance—no investment component.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-black mb-3">Who This Is For</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="flex items-start gap-2">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-1"></i>
+                                <p class="text-black/70">Young families protecting a mortgage</p>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-1"></i>
+                                <p class="text-black/70">Parents replacing income for 18-25 years</p>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-1"></i>
+                                <p class="text-black/70">Business owners covering short-term obligations</p>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-1"></i>
+                                <p class="text-black/70">Anyone on a tight budget who wants maximum coverage</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 rounded-r-xl p-6">
+                        <h4 class="font-bold text-black mb-2">The Catch</h4>
+                        <p class="text-black/70">
+                            Your premium increases when you renew. If you want coverage at age 65, it'll cost much more than your current rate. But here's the strategy: Lock in a 20 or 30-year term now while you're young. By the time it expires, your kids are raised, your mortgage is smaller, and you may not need as much coverage.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h4 class="font-bold text-black mb-2">Example Scenario</h4>
+                        <p class="text-black/70">
+                            <strong>Sarah, age 32:</strong> $500K term life, 25-year term = $30/month ($360/year). At age 57, the term expires. She might only need $100K by then (her house is paid off), so she can convert a portion to permanent coverage or go without.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Type 2: Whole Life -->
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border-2 border-gray-100 mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl">2</span>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-black">Whole Life Insurance</h2>
+                        <p class="text-lg text-black/70 italic">"The 'Investment + Safety Net' Approach"</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-black mb-3">What It Is</h3>
+                        <p class="text-black/70 leading-relaxed">
+                            Permanent coverage that lasts your entire life (until age 100 or death, whichever comes first). Every premium payment is split: part pays for insurance, part builds cash value that grows tax-deferred.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-purple-50 rounded-xl p-6">
+                            <h4 class="font-bold text-black mb-2">The Cost</h4>
+                            <p class="text-black/70">Higher premiums. That same 35-year-old paying $30/month for term might pay $120-150/month for whole life. But those premiums are locked in forever.</p>
+                        </div>
+                        <div class="bg-green-50 rounded-xl p-6">
+                            <h4 class="font-bold text-black mb-2">Cash Value</h4>
+                            <p class="text-black/70">Yes. Your policy builds cash reserves that you can borrow against, withdraw, or leave to your beneficiaries. Many clients use this as a tax-sheltered savings vehicle.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-black mb-3">Who This Is For</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="flex items-start gap-2">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-1"></i>
+                                <p class="text-black/70">High-net-worth individuals (business owners, executives)</p>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-1"></i>
+                                <p class="text-black/70">Anyone wanting permanent, lifetime protection</p>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-1"></i>
+                                <p class="text-black/70">Estate planning (tax-free death benefit passes to heirs)</p>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-600 shrink-0 mt-1"></i>
+                                <p class="text-black/70">People who want insurance and a forced savings mechanism</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h4 class="font-bold text-black mb-2">Example Scenario</h4>
+                        <p class="text-black/70">
+                            <strong>Michael, age 42, business owner:</strong> $1M whole life = $250/month (locked forever). At age 55, his policy's cash value has grown to $95K. At age 75, if he passes, his family receives $1M tax-free. The cash value is part of his estate legacy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Type 3: Universal Life -->
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border-2 border-gray-100 mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl">3</span>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-black">Universal Life (UL) Insurance</h2>
+                        <p class="text-lg text-black/70 italic">"The 'Flexible' Approach — For People Who Hate Being Locked In"</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-black mb-3">What It Is</h3>
+                        <p class="text-black/70 leading-relaxed">
+                            Permanent coverage with flexible premiums and flexible payouts. You can adjust how much you pay and how much coverage you carry (within limits). Like whole life, it builds cash value.
+                        </p>
+                    </div>
+
+                    <div class="bg-green-50 rounded-xl p-6">
+                        <h4 class="font-bold text-black mb-2">The Cost</h4>
+                        <p class="text-black/70 mb-3">Mid-range premiums. More than term, but you get flexibility. There are two ways insurers charge for the insurance part:</p>
+                        <ul class="list-disc list-inside space-y-2 text-black/70">
+                            <li><strong>Yearly Renewable Term (YRT) COI:</strong> Your cost-of-insurance increases every year as you age. But your cash value grows faster early on.</li>
+                            <li><strong>Level COI:</strong> Your cost stays the same forever. Safer long-term, but lower cash value growth early on.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 rounded-r-xl p-6">
+                        <h4 class="font-bold text-black mb-2">The Warning</h4>
+                        <p class="text-black/70">
+                            UL is powerful, but it requires monitoring. If you stop paying premiums or markets tank, your cash value can shrink, forcing you to pay more to keep coverage active. Not a "set and forget" product.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h4 class="font-bold text-black mb-2">Example Scenario</h4>
+                        <p class="text-black/70">
+                            <strong>Jennifer, age 40, sales executive:</strong> $750K UL with level COI = $95/month. She gets a big bonus in year 3, adjusts her coverage to $1M without underwriting. In year 8, during a slow market, her cash value dips; she skips 2 months of payments, drawing from cash value. When business picks back up, she resumes normal payments. Flexibility.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Type 4: Segregated Funds -->
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border-2 border-gray-100 mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
+                        <span class="text-white font-bold text-2xl">4</span>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-black">Segregated Funds</h2>
+                        <p class="text-lg text-black/70 italic">"The 'Insurance Meets Investment' Approach"</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-black mb-3">What It Is</h3>
+                        <p class="text-black/70 leading-relaxed">
+                            An investment fund wrapped in an insurance contract. You get market growth potential plus insurance guarantees.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-orange-50 rounded-xl p-6">
+                            <h4 class="font-bold text-black mb-2">Maturity Guarantee</h4>
+                            <p class="text-black/70">When your term ends (usually 10 years), you're guaranteed to receive at least 75% (or 100%) of what you put in.</p>
+                        </div>
+                        <div class="bg-orange-50 rounded-xl p-6">
+                            <h4 class="font-bold text-black mb-2">Death Benefit Guarantee</h4>
+                            <p class="text-black/70">If you die anytime, your beneficiary gets at least 75% (or 100%) of your deposits, regardless of market performance.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-xl p-6">
+                        <h4 class="font-bold text-black mb-2">The "Reset" Strategy</h4>
+                        <p class="text-black/70">
+                            If your investments grow 50% by year 3, you can "reset"—locking in your gains and raising your guaranteed amount. But resetting restarts the 10-year clock.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h4 class="font-bold text-black mb-2">Example Scenario</h4>
+                        <p class="text-black/70">
+                            <strong>Robert, age 48:</strong> Invests $100K in seg fund with 75% guarantee. Markets boom → value hits $150K in year 4 → he resets, locking 75% of $150K = $112.5K guaranteed. Markets later crash → his account drops to $95K, but he still has his $112.5K guarantee when the 10-year term ends.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border-2 border-gray-100 mb-12 overflow-x-auto">
+                <h2 class="text-3xl font-bold text-black mb-8 text-center">The Comparison Table</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-[#1f1738] text-[#f5f3ed]">
+                                <th class="p-4 text-left border border-[#f5f3ed]/20">Feature</th>
+                                <th class="p-4 text-center border border-[#f5f3ed]/20">Term</th>
+                                <th class="p-4 text-center border border-[#f5f3ed]/20">Whole Life</th>
+                                <th class="p-4 text-center border border-[#f5f3ed]/20">Universal Life</th>
+                                <th class="p-4 text-center border border-[#f5f3ed]/20">Seg Funds</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-4 font-semibold text-black">Cost</td>
+                                <td class="p-4 text-center text-black/70">Lowest</td>
+                                <td class="p-4 text-center text-black/70">Higher</td>
+                                <td class="p-4 text-center text-black/70">Mid-range</td>
+                                <td class="p-4 text-center text-black/70">Higher</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 bg-gray-50">
+                                <td class="p-4 font-semibold text-black">Cash Value</td>
+                                <td class="p-4 text-center text-black/70">None</td>
+                                <td class="p-4 text-center text-black/70">Yes</td>
+                                <td class="p-4 text-center text-black/70">Yes</td>
+                                <td class="p-4 text-center text-black/70">Yes</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-4 font-semibold text-black">Lifetime Coverage</td>
+                                <td class="p-4 text-center text-black/70">No (expires)</td>
+                                <td class="p-4 text-center text-black/70">Yes</td>
+                                <td class="p-4 text-center text-black/70">Yes</td>
+                                <td class="p-4 text-center text-black/70">No (but guaranteed floor)</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 bg-gray-50">
+                                <td class="p-4 font-semibold text-black">Flexibility</td>
+                                <td class="p-4 text-center text-black/70">Low</td>
+                                <td class="p-4 text-center text-black/70">Low</td>
+                                <td class="p-4 text-center text-black/70">High</td>
+                                <td class="p-4 text-center text-black/70">Moderate</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-4 font-semibold text-black">Best For</td>
+                                <td class="p-4 text-center text-black/70">Young families, mortgages</td>
+                                <td class="p-4 text-center text-black/70">Permanent protection, estate planning</td>
+                                <td class="p-4 text-center text-black/70">Business owners, flexibility</td>
+                                <td class="p-4 text-center text-black/70">Investors, market upside + safety</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-4 font-semibold text-black">Complexity</td>
+                                <td class="p-4 text-center text-black/70">Simple</td>
+                                <td class="p-4 text-center text-black/70">Moderate</td>
+                                <td class="p-4 text-center text-black/70">High</td>
+                                <td class="p-4 text-center text-black/70">High</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Which Type Should You Choose -->
+            <div class="bg-gradient-to-br from-[#1f1738] to-[#251a3d] rounded-3xl p-8 md:p-12 text-[#f5f3ed] mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Which Type Should You Choose?</h2>
+                <p class="text-xl mb-6">You're probably thinking: "Okay, but which one do I actually need?"</p>
+                <p class="text-lg mb-6">Here's the honest truth: It depends on four things:</p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white/10 rounded-xl p-6">
+                        <h3 class="font-bold text-lg mb-2">Your age</h3>
+                        <p class="text-[#f5f3ed]/90">Younger? Term might be all you need. Older? Permanent options shine.</p>
+                    </div>
+                    <div class="bg-white/10 rounded-xl p-6">
+                        <h3 class="font-bold text-lg mb-2">Your income stability</h3>
+                        <p class="text-[#f5f3ed]/90">Consistent paycheck? Fixed premium whole life works. Variable income? UL flexibility wins.</p>
+                    </div>
+                    <div class="bg-white/10 rounded-xl p-6">
+                        <h3 class="font-bold text-lg mb-2">Your goals</h3>
+                        <p class="text-[#f5f3ed]/90">Just protect the family? Term does it cheaply. Building wealth, minimizing taxes? Whole life or seg funds make sense.</p>
+                    </div>
+                    <div class="bg-white/10 rounded-xl p-6">
+                        <h3 class="font-bold text-lg mb-2">Your risk tolerance</h3>
+                        <p class="text-[#f5f3ed]/90">Want guarantees? Whole life or seg funds. Comfortable with "expires at 65"? Term is fine.</p>
+                    </div>
+                </div>
+
+                <p class="text-xl font-semibold">The good news: You don't have to figure this out alone. That's what we're here for.</p>
+            </div>
+
+            <!-- CTA Section -->
+            <section id="consultation" class="bg-gradient-to-br from-[#1f1738] via-[#251a3d] to-[#1a1230] rounded-3xl p-8 md:p-16 text-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10">
+                    <div class="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+                </div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#f5f3ed] mb-6">
+                        Let's Find Your Best Fit
+                    </h2>
+                    <p class="text-xl text-[#f5f3ed]/90 mb-8">
+                        In a 20-minute conversation, we'll outline your actual options and show you the monthly cost for each.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="#consultation" class="px-8 py-4 bg-[#f5f3ed] text-[#1f1738] rounded-xl font-bold hover:bg-[#f5f3ed]/90 transition-all flex items-center gap-2 shadow-xl hover:scale-105 transform duration-300">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                            Get Your Personalized Plan
+                        </a>
+                        <a href="life-insurance-disability.html" class="px-8 py-4 bg-transparent border-2 border-[#f5f3ed]/30 text-[#f5f3ed] rounded-xl font-bold hover:border-[#f5f3ed] hover:bg-[#f5f3ed]/10 transition-all flex items-center gap-2">
+                            <i data-lucide="download" class="w-5 h-5"></i>
+                            Download Comparison Guide (Free)
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1f1738] text-[#f5f3ed] py-12 border-t border-[#f5f3ed]/10">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex flex-wrap items-center gap-6 text-sm">
+                    <a href="#" class="hover:text-[#f5f3ed] transition-colors">Privacy Policy</a>
+                    <span class="hidden md:inline">•</span>
+                    <a href="#" class="hover:text-[#f5f3ed] transition-colors">Term & Condition</a>
+                    <span class="hidden md:inline">•</span>
+                    <a href="#" class="hover:text-[#f5f3ed] transition-colors">FAQ</a>
+                </div>
+                <p class="text-sm text-[#f5f3ed]/70">Copyright Virelia 2025. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.setAttribute('data-lucide', 'menu');
+                } else {
+                    icon.setAttribute('data-lucide', 'x');
+                }
+                lucide.createIcons();
+            });
+            
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
