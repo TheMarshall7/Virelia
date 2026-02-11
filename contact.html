@@ -226,12 +226,16 @@
                             <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#1f1738] focus:outline-none transition-all resize-none" placeholder="Tell us how we can help..." required></textarea>
                         </div>
 
-                        <!-- Opt-in form disclosures: GHL/CTIA-style single block + structured sections for automated review -->
+                        <!-- Opt-in form disclosures: exact checklist labels for Areo/GHL compliance review -->
                         <fieldset class="rounded-xl bg-gray-50 border-2 border-gray-200 p-4 md:p-5 space-y-4 text-sm text-gray-800" id="opt-in-form-disclosures" aria-label="Opt-in consent disclosures">
                             <legend class="text-base font-bold text-[#1f1738] px-1">Opt-in form disclosures</legend>
-                            <!-- Single block with exact GHL/CTIA phrases for automated compliance review detection -->
-                            <p id="opt-in-consent-language" class="bg-white/80 p-3 rounded-lg border border-[#1f1738]/10">By providing your contact information and submitting this form, you agree to receive text messages and other communications from Virelia Insurance Group. Message types include responses to your inquiry, appointment reminders, follow-up messages about quotes or policies, and occasional marketing. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe at any time. Reply HELP for help or contact us using the information on this page.</p>
+                            <!-- Four required items - exact labels matching compliance checklist for scraper detection -->
+                            <p><strong>Message type disclosure:</strong> You may receive responses to your inquiry, appointment reminders, follow-up messages about quotes or policies, and occasional marketing or promotional messages (email, phone, and/or SMS).</p>
+                            <p><strong>Message frequency disclosure:</strong> Message frequency varies. We may contact you in response to your request and occasionally with relevant updates.</p>
+                            <p><strong>Message &amp; data rates disclosure:</strong> Message and data rates may apply. Your mobile carrier may charge you for SMS messages you send or receive.</p>
+                            <p><strong>Opt-out instructions:</strong> Reply STOP to unsubscribe from messages. Reply HELP for help. You may also contact us by email or phone using the information on this page to be removed; we will stop sending messages as soon as reasonably possible.</p>
                             <p><strong>Business name disclosure:</strong> You will be contacted by Virelia Insurance Group. Opt-in method: website form. We do not use purchased, rented, or affiliate lead lists.</p>
+                            <p id="opt-in-consent-language" class="bg-white/80 p-3 rounded-lg border border-[#1f1738]/10">By providing your contact information and submitting this form, you agree to receive text messages and other communications from Virelia Insurance Group. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe at any time. Reply HELP for help.</p>
                             <section id="message-type-disclosure" aria-labelledby="msg-type-heading">
                                 <h3 id="msg-type-heading" class="text-sm font-bold text-[#1f1738] mt-2 mb-1">Message type disclosure</h3>
                                 <p>You may receive the following types of messages: responses to your inquiry by email, phone, or SMS; appointment reminders and scheduling confirmations; follow-up messages about insurance quotes, applications, or policies; and occasional marketing or promotional messages such as tips and offers about our insurance and financial services.</p>
