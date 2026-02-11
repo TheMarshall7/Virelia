@@ -226,13 +226,27 @@
                             <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#1f1738] focus:outline-none transition-all resize-none" placeholder="Tell us how we can help..." required></textarea>
                         </div>
 
-                        <!-- Opt-in form disclosures - plain text for automated review detection -->
-                        <div class="rounded-xl bg-gray-50 border-2 border-gray-200 p-4 md:p-5 space-y-4 text-sm text-gray-800">
+                        <!-- Opt-in form disclosures: semantic structure for automated review (headings + ids) -->
+                        <fieldset class="rounded-xl bg-gray-50 border-2 border-gray-200 p-4 md:p-5 space-y-4 text-sm text-gray-800" id="opt-in-form-disclosures" aria-label="Opt-in consent disclosures">
+                            <legend class="text-base font-bold text-[#1f1738] px-1">Opt-in form disclosures</legend>
                             <p><strong>Business name disclosure:</strong> You will be contacted by Virelia Insurance Group. Opt-in method: website form. We do not use purchased, rented, or affiliate lead lists.</p>
-                            <p><strong>Message type disclosure:</strong> You may receive the following types of messages: responses to your inquiry by email, phone, or SMS; appointment reminders and scheduling confirmations; follow-up messages about insurance quotes, applications, or policies; and occasional marketing or promotional messages such as tips and offers about our insurance and financial services.</p>
-                            <p><strong>Message frequency disclosure:</strong> We may contact you in response to your request and occasionally with relevant updates. Message frequency varies and may include one-time replies to your inquiry or occasional ongoing messages if you have opted in.</p>
-                            <p><strong>Message and data rates disclosure:</strong> Message and data rates may apply. Your mobile carrier may charge you for SMS messages you send or receive.</p>
-                            <p><strong>Opt-out instructions:</strong> To stop receiving messages: For SMS, reply STOP to any text message from us to unsubscribe, or reply HELP for help. For email or phone, contact us using the contact information on this page and ask to be removed from our communications. We will stop sending you messages as soon as reasonably possible after your request.</p>
+                            <section id="message-type-disclosure" aria-labelledby="msg-type-heading">
+                                <h3 id="msg-type-heading" class="text-sm font-bold text-[#1f1738] mt-2 mb-1">Message type disclosure</h3>
+                                <p>You may receive the following types of messages: responses to your inquiry by email, phone, or SMS; appointment reminders and scheduling confirmations; follow-up messages about insurance quotes, applications, or policies; and occasional marketing or promotional messages such as tips and offers about our insurance and financial services.</p>
+                            </section>
+                            <section id="message-frequency-disclosure" aria-labelledby="msg-freq-heading">
+                                <h3 id="msg-freq-heading" class="text-sm font-bold text-[#1f1738] mt-2 mb-1">Message frequency disclosure</h3>
+                                <p>We may contact you in response to your request and occasionally with relevant updates. Message frequency varies and may include one-time replies to your inquiry or occasional ongoing messages if you have opted in.</p>
+                            </section>
+                            <section id="message-and-data-rates-disclosure" aria-labelledby="msg-rates-heading">
+                                <h3 id="msg-rates-heading" class="text-sm font-bold text-[#1f1738] mt-2 mb-1">Message and data rates disclosure</h3>
+                                <p>Message and data rates may apply.</p>
+                                <p>Your mobile carrier may charge you for SMS messages you send or receive.</p>
+                            </section>
+                            <section id="opt-out-instructions" aria-labelledby="optout-heading">
+                                <h3 id="optout-heading" class="text-sm font-bold text-[#1f1738] mt-2 mb-1">Opt-out instructions</h3>
+                                <p>To stop receiving messages: For SMS, reply STOP to any text message from us to unsubscribe, or reply HELP for help. For email or phone, contact us using the contact information on this page and ask to be removed from our communications. We will stop sending you messages as soon as reasonably possible after your request.</p>
+                            </section>
                             <p>
                                 <a href="privacy-policy.html" class="text-[#1f1738] font-semibold hover:underline" target="_blank" rel="noopener">Privacy Policy</a> |
                                 <a href="terms-of-service.html" class="text-[#1f1738] font-semibold hover:underline" target="_blank" rel="noopener">Terms of Service</a>
@@ -241,7 +255,7 @@
                                 <input type="checkbox" name="consent" class="mt-1 w-4 h-4 rounded border-2 border-gray-300 text-[#1f1738] focus:ring-[#1f1738]">
                                 <span>(Optional) I agree to be contacted by Virelia Insurance Group via email, phone, and/or SMS. I have read the Privacy Policy and Terms of Service.</span>
                             </label>
-                        </div>
+                        </fieldset>
                         
                         <button type="submit" class="w-full px-6 py-4 bg-gradient-to-r from-[#1f1738] to-[#1a1230] text-[#f5f3ed] font-semibold rounded-xl hover:from-[#1a1230] hover:to-[#1f1538] transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
                             Send Message
