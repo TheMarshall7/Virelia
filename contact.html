@@ -226,34 +226,20 @@
                             <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#1f1738] focus:outline-none transition-all resize-none" placeholder="Tell us how we can help..." required></textarea>
                         </div>
 
-                        <!-- Opt-in form disclosures (required for carrier/platform review) -->
-                        <div class="rounded-xl border-2 border-[#1f1738]/20 bg-[#faf9fc] p-4 md:p-5">
-                            <p class="text-sm font-bold text-[#1f1738] mb-3">By submitting this form you agree to be contacted. Opt-in method: website form. We do not use purchased, rented, or affiliate lead lists.</p>
-                            <div class="grid md:grid-cols-2 gap-3 text-sm">
-                                <div class="rounded-lg bg-white/80 p-3 border border-[#1f1738]/10">
-                                    <p class="font-bold text-[#1f1738] text-xs uppercase tracking-wide mb-1">Message type disclosure</p>
-                                    <p class="text-gray-700">You may receive: replies to your inquiry; appointment reminders; follow-ups on quotes/applications; and occasional marketing (tips, offers). Via email, phone, and/or SMS.</p>
-                                </div>
-                                <div class="rounded-lg bg-white/80 p-3 border border-[#1f1738]/10">
-                                    <p class="font-bold text-[#1f1738] text-xs uppercase tracking-wide mb-1">Message frequency disclosure</p>
-                                    <p class="text-gray-700">We contact you in response to your request and occasionally with updates. Frequency varies (e.g. one-time replies or occasional ongoing messages if you opt in).</p>
-                                </div>
-                                <div class="rounded-lg bg-white/80 p-3 border border-[#1f1738]/10">
-                                    <p class="font-bold text-[#1f1738] text-xs uppercase tracking-wide mb-1">Message and data rates disclosure</p>
-                                    <p class="text-gray-700">Message and data rates may apply for SMS. Your carrier may charge for messages you send or receive.</p>
-                                </div>
-                                <div class="rounded-lg bg-white/80 p-3 border border-[#1f1738]/10">
-                                    <p class="font-bold text-[#1f1738] text-xs uppercase tracking-wide mb-1">Opt-out instructions</p>
-                                    <p class="text-gray-700">To stop messages: SMS — reply <strong>STOP</strong> to unsubscribe or <strong>HELP</strong> for help. Email/phone — contact us on this page and ask to be removed. We stop as soon as reasonably possible.</p>
-                                </div>
-                            </div>
-                            <div class="mt-3 pt-3 border-t border-[#1f1738]/10 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
-                                <a href="privacy-policy.html" class="text-[#1f1738] font-semibold hover:underline" target="_blank" rel="noopener">Privacy Policy</a>
+                        <!-- Opt-in form disclosures - plain text for automated review detection -->
+                        <div class="rounded-xl bg-gray-50 border-2 border-gray-200 p-4 md:p-5 space-y-4 text-sm text-gray-800">
+                            <p><strong>Business name disclosure:</strong> You will be contacted by Virelia Insurance Group. Opt-in method: website form. We do not use purchased, rented, or affiliate lead lists.</p>
+                            <p><strong>Message type disclosure:</strong> You may receive the following types of messages: responses to your inquiry by email, phone, or SMS; appointment reminders and scheduling confirmations; follow-up messages about insurance quotes, applications, or policies; and occasional marketing or promotional messages such as tips and offers about our insurance and financial services.</p>
+                            <p><strong>Message frequency disclosure:</strong> We may contact you in response to your request and occasionally with relevant updates. Message frequency varies and may include one-time replies to your inquiry or occasional ongoing messages if you have opted in.</p>
+                            <p><strong>Message and data rates disclosure:</strong> Message and data rates may apply. Your mobile carrier may charge you for SMS messages you send or receive.</p>
+                            <p><strong>Opt-out instructions:</strong> To stop receiving messages: For SMS, reply STOP to any text message from us to unsubscribe, or reply HELP for help. For email or phone, contact us using the contact information on this page and ask to be removed from our communications. We will stop sending you messages as soon as reasonably possible after your request.</p>
+                            <p>
+                                <a href="privacy-policy.html" class="text-[#1f1738] font-semibold hover:underline" target="_blank" rel="noopener">Privacy Policy</a> |
                                 <a href="terms-of-service.html" class="text-[#1f1738] font-semibold hover:underline" target="_blank" rel="noopener">Terms of Service</a>
-                            </div>
-                            <label class="flex items-start gap-3 cursor-pointer group mt-3 text-sm text-gray-700">
+                            </p>
+                            <label class="flex items-start gap-3 cursor-pointer pt-2">
                                 <input type="checkbox" name="consent" class="mt-1 w-4 h-4 rounded border-2 border-gray-300 text-[#1f1738] focus:ring-[#1f1738]">
-                                <span>(Optional) I agree to be contacted by Virelia Insurance Group via email, phone, and/or SMS. I have read the Privacy Policy and Terms of Service above.</span>
+                                <span>(Optional) I agree to be contacted by Virelia Insurance Group via email, phone, and/or SMS. I have read the Privacy Policy and Terms of Service.</span>
                             </label>
                         </div>
                         
