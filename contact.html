@@ -184,90 +184,33 @@
         <!-- Contact Section -->
         <section class="max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-20">
             <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Contact Form -->
+                <!-- Contact Form: GoHighLevel embed (compliance review scans GHL forms) -->
                 <div class="bg-white rounded-3xl p-8 md:p-10 shadow-xl border-2 border-gray-100">
                     <h2 class="text-3xl font-bold text-[#1f1738] mb-6">Send Us a Message</h2>
-                    <form class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="firstName" class="block text-sm font-semibold text-gray-700 mb-2">First Name</label>
-                                <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#1f1738] focus:outline-none transition-all" placeholder="John">
-                            </div>
-                            <div>
-                                <label for="lastName" class="block text-sm font-semibold text-gray-700 mb-2">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#1f1738] focus:outline-none transition-all" placeholder="Doe">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#1f1738] focus:outline-none transition-all" placeholder="john@example.com" required>
-                        </div>
-                        
-                        <div>
-                            <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone (Optional)</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#1f1738] focus:outline-none transition-all" placeholder="(555) 123-4567">
-                        </div>
-                        
-                        <div>
-                            <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">Subject</label>
-                            <select id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#1f1738] focus:outline-none transition-all">
-                                <option value="">Select a topic...</option>
-                                <option value="life-insurance">Life Insurance</option>
-                                <option value="disability">Disability Insurance</option>
-                                <option value="tax">Tax Solutions</option>
-                                <option value="agent">Agent Opportunities</option>
-                                <option value="general">General Inquiry</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
-                            <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#1f1738] focus:outline-none transition-all resize-none" placeholder="Tell us how we can help..." required></textarea>
-                        </div>
-
-                        <!-- Opt-in form disclosures: exact checklist labels for Areo/GHL compliance review -->
-                        <fieldset class="rounded-xl bg-gray-50 border-2 border-gray-200 p-4 md:p-5 space-y-4 text-sm text-gray-800" id="opt-in-form-disclosures" aria-label="Opt-in consent disclosures">
-                            <legend class="text-base font-bold text-[#1f1738] px-1">Opt-in form disclosures</legend>
-                            <!-- Four required items - exact labels matching compliance checklist for scraper detection -->
-                            <p><strong>Message type disclosure:</strong> You may receive responses to your inquiry, appointment reminders, follow-up messages about quotes or policies, and occasional marketing or promotional messages (email, phone, and/or SMS).</p>
-                            <p><strong>Message frequency disclosure:</strong> Message frequency varies. We may contact you in response to your request and occasionally with relevant updates.</p>
-                            <p><strong>Message &amp; data rates disclosure:</strong> Message and data rates may apply. Your mobile carrier may charge you for SMS messages you send or receive.</p>
-                            <p><strong>Opt-out instructions:</strong> Reply STOP to unsubscribe from messages. Reply HELP for help. You may also contact us by email or phone using the information on this page to be removed; we will stop sending messages as soon as reasonably possible.</p>
-                            <p><strong>Business name disclosure:</strong> You will be contacted by Virelia Insurance Group. Opt-in method: website form. We do not use purchased, rented, or affiliate lead lists.</p>
-                            <p id="opt-in-consent-language" class="bg-white/80 p-3 rounded-lg border border-[#1f1738]/10">By providing your contact information and submitting this form, you agree to receive text messages and other communications from Virelia Insurance Group. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe at any time. Reply HELP for help.</p>
-                            <section id="message-type-disclosure" aria-labelledby="msg-type-heading">
-                                <h3 id="msg-type-heading" class="text-sm font-bold text-[#1f1738] mt-2 mb-1">Message type disclosure</h3>
-                                <p>You may receive the following types of messages: responses to your inquiry by email, phone, or SMS; appointment reminders and scheduling confirmations; follow-up messages about insurance quotes, applications, or policies; and occasional marketing or promotional messages such as tips and offers about our insurance and financial services.</p>
-                            </section>
-                            <section id="message-frequency-disclosure" aria-labelledby="msg-freq-heading">
-                                <h3 id="msg-freq-heading" class="text-sm font-bold text-[#1f1738] mt-2 mb-1">Message frequency disclosure</h3>
-                                <p>We may contact you in response to your request and occasionally with relevant updates. Message frequency varies and may include one-time replies to your inquiry or occasional ongoing messages if you have opted in.</p>
-                            </section>
-                            <section id="message-and-data-rates-disclosure" aria-labelledby="msg-rates-heading">
-                                <h3 id="msg-rates-heading" class="text-sm font-bold text-[#1f1738] mt-2 mb-1">Message and data rates disclosure</h3>
-                                <p>Message and data rates may apply.</p>
-                                <p>Your mobile carrier may charge you for SMS messages you send or receive.</p>
-                            </section>
-                            <section id="opt-out-instructions" aria-labelledby="optout-heading">
-                                <h3 id="optout-heading" class="text-sm font-bold text-[#1f1738] mt-2 mb-1">Opt-out instructions</h3>
-                                <p>To stop receiving messages: For SMS, reply STOP to any text message from us to unsubscribe, or reply HELP for help. For email or phone, contact us using the contact information on this page and ask to be removed from our communications. We will stop sending you messages as soon as reasonably possible after your request.</p>
-                            </section>
-                            <p>
-                                <a href="privacy-policy.html" class="text-[#1f1738] font-semibold hover:underline" target="_blank" rel="noopener">Privacy Policy</a> |
-                                <a href="terms-of-service.html" class="text-[#1f1738] font-semibold hover:underline" target="_blank" rel="noopener">Terms of Service</a>
-                            </p>
-                            <label class="flex items-start gap-3 cursor-pointer pt-2">
-                                <input type="checkbox" name="consent" class="mt-1 w-4 h-4 rounded border-2 border-gray-300 text-[#1f1738] focus:ring-[#1f1738]">
-                                <span>(Optional) I agree to be contacted by Virelia Insurance Group via email, phone, and/or SMS. I have read the Privacy Policy and Terms of Service.</span>
-                            </label>
-                        </fieldset>
-                        
-                        <button type="submit" class="w-full px-6 py-4 bg-gradient-to-r from-[#1f1738] to-[#1a1230] text-[#f5f3ed] font-semibold rounded-xl hover:from-[#1a1230] hover:to-[#1f1538] transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
-                            Send Message
-                            <i data-lucide="send" class="w-5 h-5"></i>
-                        </button>
-                    </form>
+                    <div id="ghl-contact-form" class="min-h-[600px] rounded-xl overflow-hidden">
+                        <iframe
+                            src="https://api.leadconnectorhq.com/widget/form/S4WReWV3gg2GZtXny01m"
+                            style="width:100%;height:1031px;border:none;border-radius:3px"
+                            id="inline-S4WReWV3gg2GZtXny01m"
+                            data-layout="{'id':'INLINE'}"
+                            data-trigger-type="alwaysShow"
+                            data-trigger-value=""
+                            data-activation-type="alwaysActivated"
+                            data-activation-value=""
+                            data-deactivation-type="neverDeactivate"
+                            data-deactivation-value=""
+                            data-form-name="C0ontct"
+                            data-height="1031"
+                            data-layout-iframe-id="inline-S4WReWV3gg2GZtXny01m"
+                            data-form-id="S4WReWV3gg2GZtXny01m"
+                            title="Contact - Virelia Insurance Group"
+                        ></iframe>
+                    </div>
+                    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                    <p class="text-xs text-gray-500 mt-3">
+                        <a href="privacy-policy.html" class="text-[#1f1738] hover:underline">Privacy Policy</a> ·
+                        <a href="terms-of-service.html" class="text-[#1f1738] hover:underline">Terms of Service</a>
+                    </p>
                 </div>
 
                 <!-- Contact Information -->
